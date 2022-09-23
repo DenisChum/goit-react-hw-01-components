@@ -1,25 +1,26 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import {Item, List} from './Statistic.styled'
 
-// function randomColor() {
-// let color = `#${(Math.random().toString(16) + '000000')
-//     .substring(2, 8)
-//     .toUpperCase()}80`;
-// return color;
-// }
+function randomColor() {
+let color = `#${(Math.random().toString(16) + '000000')
+    .substring(2, 8)
+    .toUpperCase()}80`;
+return color;
+}
 
 const Statistics = ({ title, stats }) => {
     return(
     <section>
             {title && (<h2>{title}</h2>)}
-            <ul>
+            <List>
                 {stats.map(({ id, label, percentage }) => {
-                    return (<li key = {id}>
+                    return (<Item backgroundColor={randomColor()} key = {id}>
                         <span>{label}</span>
                         <span>{percentage}%</span>
-                    </li>)
+                    </Item>)
                 })}
-            </ul>
+            </List>
     </section>
     )
 }

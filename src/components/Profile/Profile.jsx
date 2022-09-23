@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import {Card, Avatar} from './Profile.styled'
 
 
 const Profile = ({
@@ -9,12 +10,11 @@ const Profile = ({
     avatar,
     stats : { followers, views, likes },
 }) => (
-  <div className="profile">
+  <Card>
   <div className="description">
-    <img
+    <Avatar
         src={avatar}
       alt="User avatar"
-      className="avatar"
     />
     <p className="name">{username}</p>
     <p className="tag">{tag}</p>
@@ -35,7 +35,7 @@ const Profile = ({
       <span className="quantity">{likes}</span>
     </li>
   </ul>
-  </div>)
+  </Card>)
 
 Profile.propTypes = {
   username: propTypes.string.isRequired,
