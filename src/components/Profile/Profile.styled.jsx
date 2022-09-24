@@ -40,7 +40,17 @@ export const StatsItem = styled.li`
 export const Label = styled.span`
 display: block;
 font-weight: bold;
+`;
+
+export const Tag = styled.p`
+font-weight: 600;
 `
+
+export const Location = styled.p`
+font-weight: 600;
+
+`
+
 
 
 export const Avatar = styled.img`
