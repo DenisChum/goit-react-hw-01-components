@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import React from 'react'
 
 import user from 'data/user.json';
 import data from 'data/data.json';
