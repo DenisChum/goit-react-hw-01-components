@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import {Card, Avatar,Description, Name} from './Profile.styled'
+import {Card, Avatar,Description, Name, Stats, StatsItem, Label} from './Profile.styled'
 
 
 const Profile = ({
@@ -11,30 +11,30 @@ const Profile = ({
     stats : { followers, views, likes },
 }) => (
   <Card>
-  <Description className="description">
+  <Description>
     <Avatar
         src={avatar}
       alt="User avatar"
     />
-    <Name className="name">{username}</Name>
+    <Name>{username}</Name>
     <p className="tag">{tag}</p>
     <p className="location">{location}</p>
   </Description>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-       <span className="quantity">{followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
-    </li>
-  </ul>
+  <Stats>
+    <StatsItem>
+      <Label>Followers</Label>
+       <span>{followers}</span>
+    </StatsItem>
+    <StatsItem>
+      <Label>Views</Label>
+      <span>{views}</span>
+    </StatsItem>
+    <StatsItem>
+      <Label>Likes</Label>
+      <span>{likes}</span>
+    </StatsItem>
+  </Stats>
   </Card>)
 
 Profile.propTypes = {

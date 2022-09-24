@@ -1,4 +1,6 @@
 import propTypes from "prop-types";
+// import {  Status } from '../FriendList.styled';
+
 
 const FriendListItem = ({ avatar, name, isOnline }) =>
 (
